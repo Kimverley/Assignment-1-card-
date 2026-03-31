@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f3f4f6 ;
+            display: flex;
+            padding-top: 40px;
+            justify-content: center;
+        }
+
+
+        .card{
+            width: 250px;
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+
+        p{
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="card-container" >
+    </div>
+    <script >
+        const container = document.getElementById("card-container");
+        const card = document.createElement("div");
+        card.className = "card";
+        const image = document.createElement("img");
+        image.src = "image/avater.png";  
+        image.alt = "Profile Picture";
+        const name = document.createElement("h2");
+        name.textContent = "John Smith";
+        const job = document.createElement("p");
+        job.textContent = "Web Developer";
+
+        const text = document.createElement("p");
+        text.textContent = "Phoenix, Arizona";
+
+
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(job);
+        card.appendChild(text);
+
+        container.appendChild(card);
+
+    </script>
+</body>
+</html>
